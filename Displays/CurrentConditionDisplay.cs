@@ -10,14 +10,12 @@ namespace ObserverPattern.Displays
     internal class CurrentConditionDisplay : WeatherDisplay
     {
         
-        public CurrentConditionDisplay(Subject weatherData) : base(weatherData)
-        { 
-            // Set the field and register itself with the weatherdata subject
-        }
+        public CurrentConditionDisplay(Subject weatherData) : base(weatherData){ }
 
         public override void Display()
         {
-            // Print the current conditions of the weather
+            Console.WriteLine("Current weather conditions:");
+            Console.WriteLine($"Temperature: {Temperature}°C");
         }
     }
 }
